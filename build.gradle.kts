@@ -17,6 +17,10 @@ repositories {
         name = "Valkyrien Skies Internal"
         url = uri("https://maven.valkyrienskies.org")
     }
+    maven {
+        name = "JitPack"
+        url = uri("https://jitpack.io")
+    }
 }
 
 idea {
@@ -29,9 +33,11 @@ idea {
 dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 
-    implementation("me.alex_s168:mathlib:0.4")
+    implementation("me.alex_s168:mathlib:0.5")
     implementation("me.alex_s168:meshlib:0.6")
-    implementation("me.alex_s168:ezconf:0.1")
+    implementation("me.alex_s168:ezconf:0.2")
+
+    implementation("com.github.alex-s168:ktlib:4a380bf749")
 
     // vs-core
     val vsCoreVersion = project.properties["vs_core_version"]
